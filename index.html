@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piha Lodge</title>
+  
     <link rel="stylesheet" href="./css/form-pages.css">
     
 </head>
@@ -27,31 +28,32 @@
         <div class="banner"></div>
 
         <div class="book-stay">
-            <section id="booking-form">
-                <h2>BOOK YOUR STAY</h2>
-                <form action="/book" method="post">
-                    <label for="check-in">Check-in date:</label><br/>
-                    <input type='date' id='check-in' name='check-in' required><br/>
-            
-                    <label for='check-out'>Check-out date:</label><br/>
-                    <input type='date' id='check-out' name='check-out' required><br/>
-            
-                    <label for='adults'>Number of adults:</label><br/>
-                    <input type='number' id='adults' name='adults' min=1 required><br/>
-            
-                    <label for='children'>Children:</label><br/>
-                    <input type='number' id='children' name='children'><br/>
-            
-                    <button type="submit">Book Now</button>
-                    
-                </form>
-            </section>
             <section id="form-page">
                     <h2 class="underline">Book your stay</h2>
                     <div class="container-half card">
                         <subtitle class="card-title">Your Details</subtitle>
-                        <progress value="10" max="100"></progress>
+                        
                         <div id="form-page1" class="form-page" style="display: block">
+                            <div id="booking-form">
+                                <label for="check-in" class="row">Check-in date:</label><br/>
+                                    <input type='date' id='check-in' name='check-in' required><br/>
+                            
+                                    <label for='check-out' class="row">Check-out date:</label><br/>
+                                    <input type='date' id='check-out' name='check-out' required><br/>
+                            
+                                    <label for='adults' class="row">Number of adults:</label><br/>
+                                    <input type='number' id='adults' name='adults' min=1 required><br/>
+                            
+                                    <label for='children' class="row">Children:</label><br/>
+                                    <input type='number' id='children' name='children'><br/>
+                            
+                                    <button class="bookNow" type ="button" onclick="showPage(2)">
+                                        Book Now
+                                    </button>
+                            </div>
+                        </div>
+                        <div id="form-page2" class="form-page" style="display: none"></div>
+                        <progress value="10" max="100"></progress>
                             <div><!--page title-->
                                 <h3>Room Details</h3>
                             </div>
@@ -64,21 +66,21 @@
                                             dolorem veritatis consequuntur iure maiores temporibus 
                                             tempore autem dolore odit saepe necessitatibus dignissimos a.</p>
                                         <p>Price per night: $100 NZD</p>
-                                        <!-- Dropdown for Number of Rooms -->
+                                  
                                         <select class="room-count" data-price="100">
                                             <option value="0">0 Room</option>
                                             <option value="1">1 Room</option>
                                             <option value="2">2 Rooms</option>
                                             <option value="3">3 Rooms</option>
-                                            <!-- Add more options as needed -->
+                                         
                                         </select>
                                     </div>
                                     <div class="room-image">
                                         <img src="single_room.jpg" alt="Single Room">
                                     </div>
                                 </div>
-                                
-                                <div class="room">
+                              
+                                <!-- <div class="room">
                                     <div class="room-details">
                                         <h2>Double Room</h2>
                                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
@@ -86,26 +88,25 @@
                                             dolorem veritatis consequuntur iure maiores temporibus 
                                             tempore autem dolore odit saepe necessitatibus dignissimos a.</p>
                                         <p>Price per night: $150 NZD</p>
-                                        <!-- Dropdown for Number of Rooms -->
+                                        
                                         <select class="room-count" data-price="150">
                                             <option value="0">0 Room</option>
                                             <option value="1">1 Room</option>
                                             <option value="2">2 Rooms</option>
                                             <option value="3">3 Rooms</option>
-                                            <!-- Add more options as needed -->
+                                          
                                         </select>
                                     </div>
                                     <div class="room-image">
                                         <img src="double_room.jpg" alt="Double Room">
                                     </div>
-                                </div>
-                                
-                                <!-- <button id="confirm-button">Confirm</button> -->
+                                </div> -->
                                 
                                 <p id="total-price">Total Price: $0 NZD</p>
                                 
                                 <script src="calculateTotal.js"></script>
-                                <div class="needs-section">
+
+                                <div class="section">
                                     <p>Let us know what you need:</p>
                                     <div>
                                         <input type="checkbox" id="cooking" name="needs" value="cooking">
@@ -133,13 +134,13 @@
                                 <button class="next" type="button" onclick="showPage(3)">
                                     Next Page
                                 </button>
-                                <button class="previous" type="button" onclick="showPage(3)">
+                                <button class="previous" type="button" onclick="showPage(1)">
                                     Previous Page
                                 </button>
                             </div>
                         </div>
                         
-                        <div id="form-page2" class="form-page" style="display: none">
+                        <div id="form-page3" class="form-page" style="display: none">
                             <div><!--page title-->
                                 <h3>Personal Details</h3>
                             </div>
@@ -154,7 +155,7 @@
                                     <input type="text" id="name-last"/>
                                 </label>
                                 <label for="emailAddress" class="row">
-                                    Last Name:
+                                    Email Address:
                                     <input type="text" id="email"/>
                                 </label>
                                 <label for="retypeEmail" class="row">
@@ -167,20 +168,38 @@
                                 </label>
                             </div>
                             <div><!--page nav buttons-->
-                                <button class="next" type="button" onclick="showPage(2)">
+                                <button class="next" type="button" onclick="showPage(4)">
                                     NextPage
+                                </button>
+                                <button class="previous" type="button" onclick="showPage(2)">
+                                    Previous Page
                                 </button>
                             </div>
                         </div>
-                        <div id="form-page3" class="form-page" style="display: none">
+                        <div id="form-page4" class="form-page" style="display: none">
                             <div><!--page title-->
                                 <h3>Summary</h3>
                             </div>
                             <div><!--page data fields-->
-                                
+                                <div class="row">
+                                    Check-in Date: <span id="check-in"></span>
+                                </div>
+                                <div class="row">
+                                    Check-out Date: <span id="check-out"></span>
+                                </div>
+                                <div class="row">
+                                    Number of adults: <span id="adults"></span>
+                                </div>
+                                <div class="row">
+                                    Children: <span id="children"></span>
+                                </div>
+
+                                <div class="row">
+                                    Check-out Date: <span id="check-out"></span>
+                                </div>
                             </div>
                             <div><!--page nav buttons-->
-                                <button class="previous" type="button" onclick="showPage(2)">
+                                <button class="previous" type="button" onclick="showPage(3)">
                                     Previous Page
                                 </button>
                                 <button class="next" type="button" onclick="submitData()">
@@ -191,30 +210,21 @@
                     </div>
                     <div class="container-half card">
                         <subtitle class="card-title"> Your Booking Details</subtitle>
-                        <table id="booking-data">
+                        <table id="collected-data">
                             <thead>
-                                <td></td>
+                                <td>Check-in Date</td>
+                                <td>Check-out Date</td>
+                                <td>Number of Adults</td>
+                                <td>Children</td>
                             </thead>
                         </table>
                     </div>
-                    <script src="formPaging.js"></script>
+                    <script src="./js/form.js"></script>
                 </section>
             </form>
         </div>
     </div>
 
-    
-
-    
-    <footer>
-        <p>&copy; 2024 Piha Lodge. All rights reserved.</p>
-    </footer>
-    <script>
-        document.getElementById('bookNowBtn').addEventListener('click', function() {
-          document.getElementById('form-page1').style.display = 'block';
-        });
-    </script>
-    <script src="form.js"></script>
 </body>
 </html>
 
