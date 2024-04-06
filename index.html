@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piha Lodge</title>
+
+    <link rel="stylesheet" href="./css/form-pages.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/banner.css">
+
+</head>
+<style>
+    #greeting {
+    font-size: 12px;
+    margin-left: 30px;
+    color: rgb(17, 255, 0);
+    animation-name: greetingMove;
+    animation-duration: 10s;
+}
+
+@keyframes greetingMove {
+    0% { margin-left: -250px; font-size: 18px; }
+    50% { margin-left: 130px; font-size: 14px; }
+    100% { margin-left: 30px; font-size: 22px; }
+}
+</style>
+<body>
+    <header>
+        <img src="logo.png" alt="Piha Lodge Logo">
+        <form action="#" method="get">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="./tab/StoryboardPart1.pdf">Part1</a>
+        <a href="gallery.html">Part2</a>
+        <a href="./tab/websiteWireframe.drawio">Wireframe</a>
+    </nav>
+    
+    
+    
+    <!-- <section class="banner">
+        <div class="adWrapper">
+            <div class="image1" style="background-image: url('./assets/image1.jpeg');"></div> 
+            <div class="image2" style="background-image: url('./assets/image2.jpeg');"></div> 
+            <div class="text">
+                <div class="piha-text">PIHA</div>
+                <div id="greeting"><strong>Piha beach</strong></div>
+                <div class="text-line line1" style="animation-delay: 3s;">New in Auckland?</div>
+                <div class="text-line line2" style="animation-delay: 3.5s;">Want to reconnect with nature?</div>
+                <div class="text-line line3" style="animation-delay: 4s;">Escape to Piha beach and let the beauty</div>
+                <div class="text-line line4" style="animation-delay: 4.5s;">of coastline captivate your senses.</div>
+                <div class="text-line line5" style="animation-delay: 6.5s;">Build a bond that last a lifetime admidst the</div>
+                <div class="text-line line6" style="animation-delay: 7s;">beauty of Piha's costal paradis</div>
+            </div>
+            <a href="http://www.piha.co.nz/" class="link" target="_blank">Visit Piha</a>
+
+            <div class="footer">
+                <div>Krijesh</div>
+                <div>Student ID:1568289</div>
+            </div> -->
+        <!-- </div>
+        <div id="adWrapper">
+          <div id="adScene1">
+            <div id="adScene1Bg1">
+              <img src="./assets/image1.jpeg" alt="Piha Beach" onerror="handleError(this)" />
+            </div>
+            <div id="asScene1Line1">Piha</div>
+          </div>
+          <div id="adScene2">
+            <div id="adScene2Bg2">
+              <img src="./assets/image2.jpeg" alt="Piha Beauty" onerror="handleError(this)" />
+            </div>
+            <div id="asScene1Line2">Wild</div>
+          </div>
+        </div>
+        <div class="studentInfo">Your Name - Student ID</div>  -->
+    <!-- </section> -->
+      
+    <div class="banner">
+        <div class="slide-container">
+
+            <div class="image1" style="background-image: url('./assets/image1.jpeg');"></div> 
+            <div class="image2" style="background-image: url('./assets/image2.jpeg');"></div> 
+
+            <div class="text">
+                <div class="piha-text">PIHA</div>
+                <div id="greeting"><strong>Welcome</strong></div>
+                <div class="text-line line1" style="animation-delay: 3s; font-weight: bold;">Wild</div>
+                <div class="text-line line2" style="animation-delay: 3.5s; font-weight: bold;">Scenic</div>
+                <div class="text-line line3" style="animation-delay: 4s; font-weight: bold;">Beauty</div>
+            </div>
+
+            <a href="http://www.piha.co.nz/" class="link" target="_blank">Visit Piha</a>
+
+            <div class="footer">
+                <div>Krijesh</div>
+                <div>Student ID:1568289</div>
+            </div>
+        </div>
+    </div> 
+    <script>
+        function updateAdultsValue(val) {
+            document.getElementById('adultsValue').textContent = val;
+        }
+    </script>
+    <section>
+        <h2 class="underline"> Book Your Stay </h2>
+        <div class="container card">
+            <subtitle class="card-title">Your Details</subtitle>
+
+            <div id="form-page1" class="form-page" style="display: block">
+                <div id="booking-form">
+                    <label for="check-in" class="row">Check-in date:</label><br />
+                    <input type='date' id='check-in' name='check-in' required><br />
+
+                    <label for='check-out' class="row">Check-out date:</label><br />
+                    <input type='date' id='check-out' name='check-out' required><br />
+
+                    <label for='adults' class="row">Adults (between 0 and 20):</label><br />
+                    <input type="range" id="adults" name="adults" min="0" max="20" oninput="updateAdultsValue(this.value)">
+                    <span id="adultsValue">0</span> <!-- Initial value -->
+                    <label for='children' class="row">Children:</label><br />
+                    <input type='number' id='children' name='children' min=0><br />
+
+                    <button class="bookNow" type="button" onclick="showPage(2)">
+                        Book Now
+                    </button>
+                </div>
+            </div>
+            
+            <div id="form-page2" class="form-page" style="display: none">
+                <progress value="10" max="100"></progress>
+                <div><!--page title-->
+                    <h3>Room Details</h3>
+                </div>
+                <div><!--page input fields-->
+                    <div class="room">
+                        <div class="room-details">
+                            <h2>Single Room</h2>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                At similique fugit reiciendis, vitae placeat minima nostrum
+                                dolorem veritatis consequuntur iure maiores temporibus
+                                tempore autem dolore odit saepe necessitatibus dignissimos a.</p>
+                            <p>Price per night: $100 NZD</p>
+
+                            <select class="room-count" data-price="100">
+                                <option value="0">0 Room</option>
+                                <option value="1">1 Room</option>
+                                <option value="2">2 Rooms</option>
+                                <option value="3">3 Rooms</option>
+
+                            </select>
+                        </div>
+                        <div class="room-image">
+                            <img src="./assets/single_room.jpg" alt="Single Room">
+                        </div>
+                    </div>
+
+                    <div class="room">
+                        <div class="room-details">
+                            <h2>Double Room</h2>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                    At similique fugit reiciendis, vitae placeat minima nostrum 
+                                    dolorem veritatis consequuntur iure maiores temporibus 
+                                    tempore autem dolore odit saepe necessitatibus dignissimos a.</p>
+                                <p>Price per night: $150 NZD</p>
+                                            
+                                <select class="room-count" data-price="150">
+                                    <option value="0">0 Room</option>
+                                    <option value="1">1 Room</option>
+                                    <option value="2">2 Rooms</option>
+                                    <option value="3">3 Rooms</option>
+                                              
+                                </select>
+                        </div>
+                        <div class="room-image">
+                            <img src="./assets/double_room.jpg" alt="Double Room">
+                        </div>
+                    </div>
+
+                    <p id="total-price">Total Price: $0 NZD</p>
+
+                    <script src="calculateTotal.js"></script>
+
+                    <div class="section">
+                        <p>Let us know what you need: (optional)</p>
+                        <div>
+                            <input type="checkbox" id="car-park" name="needs" value="carPark">
+                            <label for="car-park">Car park</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="spa" name="needs" value="spa">
+                            <label for="spa">Spa</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="swimming-pool" name="needs" value="swimmingPool">
+                            <label for="swimming-pool">Swimming pool</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="gym" name="needs" value="gym">
+                            <label for="gym">Gym</label>
+                        </div>
+                        <br>
+                        <p>Do you require cooking facilities</p>
+                        <input type="radio" id="yes" name="fav_language" value="yes">
+                        <label for="yes">Yes</label><br>
+                        <input type="radio" id="no" name="fav_language" value="no">
+                        <label for="no">No</label><br>
+                        </div>
+                </div>
+                <div><!--page nav buttons-->
+                    <button class="previous" type="button" onclick="showPage(1)">
+                        Previous 
+                    </button>
+                    <button class="next" type="button" onclick="showPage(3)">
+                        Next
+                    </button>
+                </div>
+            </div>
+
+
+        <div id="form-page3" class="form-page" style="display: none">
+            <progress value="50" max="100"></progress>
+            <div><!--page title-->
+                <h3>Personal Details</h3>
+            </div>
+            <div>
+                <!--page input fields-->
+                <label for="first-name" class="row">
+                    First Name:
+                    <input type="text" id="first-name" />
+                </label>
+                <label for="last-name" class="row">
+                    Last Name:
+                    <input type="text" id="last-name" />
+                </label>
+                <label for="email" class="row">
+                    Email Address:
+                    <input type="text" id="email" />
+                </label>
+                <label for="phone" class="row">
+                    Phone Number:
+                    <input type="text" id="phone" />
+                </label>
+                <h4>Do you agree with the local native conservation initiative agreement?</h4>
+	            <label for="question">Yes:</label>
+	            <input type="radio" id="question" name="question" value="question">
+	            <br>
+	            <label for="noquestion">No:</label>
+	            <input type="radio" id="noquestion" name="noquestion" value="noquestion">
+	
+                <label for="surprise">select favorite colour for a surprise</label>
+                <input type="color" id="surprise" name="surprise" value="#ff0000"> 
+            </div>
+            <div><!--page nav buttons-->
+                <button class="previous" type="button" onclick="showPage(2)">
+                    Previous
+                </button>
+                <button class="next" type="button" onclick="showPage(4)">
+                    Next
+                </button>
+            </div>
+        </div>
+        <div id="form-page4" class="form-page" style="display: none">
+            <progress value="100" max="100"></progress>
+            <div><!--page title-->
+                <h3>Card Details</h3>
+            </div>
+            <div><!--page data fields-->
+                <label for="cardholderName" class="row">
+                    Card Holder's Name:
+                    <input type="text" id="name-card" />
+                </label>
+                <label for="cardNo" class="row">
+                    Card Number:
+                    <input type="text" id="no-card" />
+                </label>
+                <label for="expDate" class="row">
+                    Expiry Date:
+                    <input type="text" id="exp-date" name="exp-date" pattern="[0-1][0-9]/[0-9]{2}" title="Enter a date in MM/YY format" placeholder="MM/YY" required>
+
+                </label>
+                <label for="cvc" class="row">
+                    CVC:
+                    <input type="number" id="cvc-card" />
+                </label>                
+            </div>
+            <div><!--page nav buttons-->
+                <button class="previous" type="button" onclick="showPage(3)">
+                    Previous
+                </button>
+                <button class="next" type="button" onclick="showPage(5)">
+                    Next
+                </button>
+            </div>
+        </div>
+
+        <div id="form-page5" class="form-page" style="display: none">
+            <div><!--page title-->
+                <h3>Summary</h3>
+            </div>
+            <div><!--page data fields-->
+                <div class="row">
+                    Check-in Date: <span id="check-in"></span>
+                </div>
+                <div class="row">
+                    Check-out Date: <span id="check-out"></span>
+                </div>
+                <div class="row">
+                    Adults: <span id="adults"></span>
+                </div>
+                <div class="row">
+                    Children: <span id="children"></span>
+                </div>
+
+                <div class="row">
+                    First Name: <span id="first-name"></span>
+                </div>
+
+                <div class="row">
+                    Last Name: <span id="last-name"></span>
+                </div>
+
+                <div class="row">
+                    Fovourite color: <span id="last-name"></span>
+                </div>
+            </div>
+            <div><!--page nav buttons-->
+                <button class="previous" type="button" onclick="showPage(4)">
+                    Previous
+                </button>
+                <button class="anotherStay" type="button" onclick="showPage(1)" style="margin-left: 500px;">
+                    Book another stay
+                </button>
+            </div>
+        </div>
+        <script>
+            // Function to collect form data with basic validation (replace with your comprehensive validation)
+            function collectInputDetails() {
+                const checkIn = document.getElementById("check-in").value;
+                const checkOut = document.getElementById("check-out").value;
+                const adults = document.getElementById("adults").value;
+                const children = document.getElementById("children").value;
+
+                const roomCount = document.getElementById("room-count").value || ""; // Handle optional fields
+                const section = document.getElementById("section").value || "";
+
+                const fname = document.getElementById("first-name").value;
+                const lname = document.getElementById("last-name").value;
+                const email = document.getElementById("email").value;
+                const phone = document.getElementById("phone").value;
+                const surprise = document.getElementById("surprise").value;
+
+                const cName = document.getElementById("cardholderName").value || ""; // Optional (payment details)
+                const cNumber = document.getElementById("cardNo").value || "";
+                const expDate = document.getElementById("expDate").value || "";
+                const cvc = document.getElementById("cvc").value || "";
+
+                // Basic validation example (replace with thorough checks)
+                if (!checkIn || !checkOut || !adults || !children || !fname || !lname) {
+                    alert("Please fill in all required fields.");
+                    return null; // Prevent processing if validation fails
+                }
+
+                const formData = {
+                    page1: {
+                        checkInDate: checkIn,
+                        checkOutDate: checkOut,
+                        adults,
+                        children,
+                    },
+                    page2: {
+                    // Add room details if applicable
+                        roomCount,
+                        section,
+                    },
+                    page3: {
+                        firstName: fname,
+                        lastName: lname,
+                        email,
+                        phone,
+                        surpriseColor: surprise,
+                    },
+                    page4: {
+                    // Add payment details if applicable
+                        cardholderName: cName,
+                        cardNumber: cNumber,
+                        expirationDate: expDate,
+                        cvc,
+                    },
+                };
+
+                return formData;
+            }
+            // Function to populate the summary
+            function populateSummary() {
+            const formData = collectInputDetails();
+
+            if (!formData) return; // Early exit if validation fails
+
+            const checkInDateElement = document.getElementById("check-in");
+            checkInDateElement.textContent = formData.page1.checkInDate;
+
+            const checkOutDateElement = document.getElementById("check-out");
+            checkOutDateElement.textContent = formData.page1.checkOutDate;
+
+            const adultsElement = document.getElementById("adults");
+            adultsElement.textContent = formData.page1.adults;
+
+            const childrenElement = document.getElementById("children");
+            childrenElement.textContent = formData.page1.children;
+
+            const firstNameElement = document.getElementById("first-name");
+            firstNameElement.textContent = formData.page3.firstName;
+
+            const lastNameElement = document.getElementById("last-name");
+            lastNameElement.textContent = formData.page3.lastName;
+
+            const surpriseColorElement = document.getElementById("favourite-color");
+            surpriseColorElement.textContent = formData.page3.surpriseColor;
+
+            // Add code to populate other elements as needed (e.g., room details, payment information)
+
+            // Display the summary page
+            const summaryPage = document.getElementById("form-page5");
+            summaryPage.style.display = "block"; // Make the summary visible
+        }
+
+        // Handle form submission
+        const form = document.getElementById("booking-form");
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+
+            populateSummary(); // Display the summary on submission
+        });
+
+    
+        </script>
+    </section>
+    <section>
+        <div class="slider-container">
+            <div class="slider">
+              <div class="slide">
+                <img src="./assets/v-add1.jpg" alt="Image 1">
+                <div class="slide-text1">Plan Your Trip to Piha</div>
+              </div>
+              <div class="slide">
+                <img src="./assets/v-add2.jpg" alt="Image 2">
+                <div class="slide-text2">Visit Piha Lodge</div>
+              </div>
+              <div class="slide">
+                <img src="./assets/v-add3.jpg" alt="Image 3">
+                <div class="slide-text3">Book Your Stay Now. Click here!</div>
+              </div>
+              
+            </div>
+          </div>
+          <div id="reload">
+            <a href="index.html">
+                <button type="button">Reload animations button</button>
+            </a>
+        </div>
+        <a href="http://www.piha.co.nz/" class="link" target="_blank">Visit Piha</a>
+
+        <div class="footer">
+            <div>Sachina Maharjan</div>
+            <div>Student ID:1568289</div>
+        </div>
+          <script src="script.js"></script>  
+    </section>
+    <script src="./js/formPaging.js"></script>
+
+</body>
+
+</html>
