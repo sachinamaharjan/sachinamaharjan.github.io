@@ -1,0 +1,82 @@
+.slider-container {
+  width: 300px; /* Adjust container width as needed */
+  height: 400px; /* Adjust container height as needed */
+  overflow: hidden;
+  margin-left: 885px; /* Center the slider horizontally */
+  position:absolute;
+  top: 400px;
+  right: 0;
+  padding: 0px;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%; 
+  text-align: center;
+  position: relative;
+}
+
+.slide img {
+  width: 100%; /* Fills the entire slide container */
+  height: 500px; /* Adjust image height as needed */
+  object-fit: cover; /* Scales image to cover container proportionally */
+}
+
+.slide-text1,
+.slide-text2 {
+  position: absolute;
+  top: 20%; /* Adjust vertical positioning as desired */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 26pt;
+  text-align: left; /* Adjust text alignment as needed */
+  opacity: 0; /* Initially hide both texts */
+  transition: opacity 0.5s ease; /* Smooth text fade-in */
+  opacity: 0;
+}
+
+.slide:nth-child(1) .slide-text1 { /* Show text for first slide */
+  opacity: 1;
+}
+
+.slide:nth-child(2) .slide-text2 { /* Show text for second slide */
+  opacity: 1;
+}
+
+.advertisement {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.reload button{
+  margin-top: 800px;
+  overflow: visible;
+
+}

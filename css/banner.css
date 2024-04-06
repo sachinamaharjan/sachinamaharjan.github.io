@@ -1,0 +1,131 @@
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    margin-right: 0px;
+    margin-left: 0px;
+    max-width: 900px;
+    margin-top: -15px;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Keyframes for PIHA animation */
+@keyframes pihaAnimation {
+    0% { opacity: 0; transform: scale(1.1); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 0; transform: scale(1); }
+}
+
+/* Keyframes for the slide animation */
+@keyframes slide1 {
+    0%, 16.66% { opacity: 0; transform: scale(1.1); }
+    16.67%, 83.33% { opacity: 1; transform: scale(1); }
+    83.34%, 100% { opacity: 0; transform: scale(0.9); }
+}
+
+@keyframes slide2 {
+    0%, 50% { opacity: 0; transform: translateX(-100%); }
+    50.01%, 100% { opacity: 1; transform: translateX(0%); }
+}
+
+/* Apply animation to the images and text */
+.slide-container {
+    position: relative;
+    width: 1600px;
+    height: 700px;
+    overflow: hidden;
+    animation: repeatAnimation 24s infinite; /* Adjusted duration for the repeating sequence */
+}
+
+/* Apply animation to the first image */
+.image1 {
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(1.1); /* Initially apply zoom out effect */
+    animation: slide1 12s infinite; /* Apply slide1 animation */
+}
+
+/* Apply animation to the second image */
+.image2 {
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(-100%); /* Initially move image out of view */
+    animation: slide2 12s infinite; /* Apply slide2 animation */
+}
+
+/* Apply animation to text */
+.text {
+    position: absolute;
+    top: 80px;
+    left: 450px;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Apply animation to PIHA text */
+.piha-text {
+    animation: pihaAnimation 6s forwards; /* Adjusted duration for the repeating sequence */
+}
+
+/* Apply animation to text lines */
+.text-line {
+    display: block;
+    opacity: 0;
+}
+
+.line1 { animation: fadeIn 0.5s 9s forwards; }
+.line2 { animation: fadeIn 0.5s 9.5s forwards; }
+.line3 { animation: fadeIn 0.5s 10s forwards; }
+.line4 { animation: fadeIn 0.5s 10.5s forwards; }
+.line5 { animation: fadeIn 0.5s 11s forwards; }
+.line6 { animation: fadeIn 0.5s 11.5s forwards; }
+
+/* Apply animation to the link */
+.link {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0;
+}
+
+/* Apply animation to the footer */
+.footer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0;
+    color: white; /* Change color as needed */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes repeatAnimation {
+    0%, 100% { 
+        transform: scale(1); 
+    }
+    50% { 
+        transform: scale(1.1); 
+        animation: pihaAnimation 6s forwards, slideAnimation 12s infinite; /* Repeating sequence of PIHA and slide animations */
+    }
+}
+
+

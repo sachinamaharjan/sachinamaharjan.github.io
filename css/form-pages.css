@@ -1,0 +1,345 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+*::before, *::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+html,body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #000;
+    background-color: #f1f1f1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #6b6a6a;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+    
+#logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+body {
+    margin: 0 auto;
+    width: 900px;
+    height: 600px;
+    float: center;
+}
+
+section {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    padding: 16px;
+    border-radius: 0.2em;
+    margin: 0 auto;
+}
+
+article {
+    padding: 4px;
+    margin: 4px;
+    border-radius: 0.5em;
+}
+
+h1, h2, h3, p {
+    text-align: left;
+}
+
+.underline{
+    text-align: center;
+    border-bottom: 1px solid #d0d0d0;
+    padding-bottom: 3px;
+}
+
+nav {
+    background-color:  #206E32;
+    color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+    margin: 0px 0px 15px 0px;
+    border-bottom-left-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+    text-align: center;
+    padding: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+    
+nav ul li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+    
+nav ul li:hover {
+    background-color: #e0e0e0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #206E32;
+    color: #fff;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+.room {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.room-details{
+    flex: 1;
+    margin: 15px;
+}
+
+.room-details h2{
+    margin-top: 5px;
+}
+
+.room-details p{
+    margin-bottom: 5px;
+}
+
+.room-image img {
+    width: 280px;
+    height: auto;
+    margin-top: 38px;
+    margin-right: 15px;
+}
+
+.room-count {
+    /* General styling */
+    width: 100%; /* Span the full width of its container */
+    padding: 8px 10px; /* Add some padding for better readability */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Adjust font size as needed */
+    background-color: #fff; /* White background color */
+    color: #333; /* Text color */
+    cursor: pointer; /* Indicate interactivity on hover */
+  }
+  
+#booking-form{
+  padding: 20px; 
+  margin: 0 auto; 
+  max-width: 500px;
+}
+
+#booking-form label{
+    display: block;
+    margin-left: -15px;
+    padding: 15px;
+}
+
+#booking-form input[type="date"],
+#booking-form input[type="number"] {
+  width: 100%; /* Make input fields span the full width */
+  padding: 6px; /* Add some padding for better readability */
+  border: 1px solid #ccc; /* Add a border to the inputs */
+  border-radius: 4px; /* Rounded corners for inputs */
+  box-sizing: border-box; /* Include padding within the input width */
+}
+
+/* Style for the Book Now button */
+.bookNow {
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Add some space above the button */
+  }
+
+.card {
+    border: 1px solid #adadad8a;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.062);
+    position: relative;
+    margin: 15px;
+}
+
+.card-title {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background-color: #fff;
+}
+
+progress {
+    margin-left: 4px;
+    margin-top: 30px;
+    width: 78%;
+    background-color:darkgray;
+    height: 20px;
+    border-radius: 0.6em;
+}
+
+progress::-moz-progress-bar,progress::-webkit-progress-value {
+    background-color:#206E32;
+    
+}
+
+.form-page {
+    padding: 40px;
+    margin: -10px;
+    width: 850px;
+    border-radius: 5px;
+}
+
+.form-page .row {
+    width: 100%;
+    float: left;
+    padding: 20px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.form-page label input[type="text"] {
+    width:70%;
+    margin-left: 20px;
+    line-height: 150%;
+}
+
+.form-page label input[type="radio"] {
+    vertical-align: middle;
+    margin-top: -1px;
+}
+
+.form-page button {
+    background-color: #4CAF50;
+    color: #fff;
+    margin-top: 12px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-page button:hover{
+    background-color: #45a049;
+}
+
+.form-page button.next {
+    float: right;
+}
+
+.form-page button.previous {
+    float: left;
+}
+
+.section{
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.section p{
+    font-weight: bold;
+    margin: 20px;
+}
+
+.section div{
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+
+#total-price{
+    margin: 5%;
+    font-weight: bold;
+}
+
+#accept {
+    display: flex; /* Arrange elements horizontally */
+    align-items: center; /* Vertically align label and radio button */
+    margin: 10px 0; /* Add some space above and below */
+    padding: 5px; /* Add some padding inside the container */
+  }
+  
+  /* Style the radio button for better visibility */
+  #accept input[type="radio"] {
+    margin-right: 10px; /* Add spacing between radio button and label */
+    width: 18px; /* Set a fixed width for consistency */
+    height: 18px; /* Set a fixed height for consistency */
+    appearance: none; /* Remove default browser styles */
+    border: 2px solid #ccc; /* Create a solid border around the radio button */
+    border-radius: 50%; /* Make the radio button a circle */
+  }
+  
+  /* Style the label for readability */
+  #accept label {
+    font-size: 14px; /* Set a comfortable font size */
+    line-height: 1.5; /* Adjust line spacing for better readability */
+    color: #333; /* Use a dark gray for readability */
+  }
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    margin-top: 20px;
+}
+
+thead {
+    color:#fff;
+    background-color: #206E32;
+}
+
+th {
+    padding: 8px 8px 8px 16px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+td {
+    text-align: center;
+}
+
+/*form-page4*/
+/* Style the label for the expiry date */
+label[for="exp-date"] {
+    display: block; /* Makes the label appear on a new line */
+    margin-bottom: 5px; /* Add space between the label and the input field */
+  }
+  
+  /* Style the expiry date input field */
+  #exp-date {
+    width: 70px; /* Set the width of the input field */
+    padding: 5px; /* Add padding to the input field */
+    border: 1px solid #ccc; /* Add a border to the input field */
+    border-radius: 3px; /* Add rounded corners to the input field */
+  }
+  
