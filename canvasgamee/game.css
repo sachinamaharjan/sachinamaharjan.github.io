@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* Combined padding to avoid overflow */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav button {
+    background-color: #e5e5e5;
+    color: rgb(47, 22, 22);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+header nav button:hover {
+    background-color:yellow;
+}
+
+#gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-sizing: border-box; /* Include padding and border in the width */
+    padding: 20px; /* Add padding to #gameContainer */
+}
+
+canvas {
+    border: 2px solid black;
+    background-size: cover;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+#info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 12px;
+    background-color: #1f4d21;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#info div {
+    margin: 5px 0;
+}

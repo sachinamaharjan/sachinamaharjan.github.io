@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piha Lodge Booking</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="./images/logo.jpg" width="300" height="300" alt="Piha Lodge Logo">
+    </header>
+
+    <nav>
+        <a href="index.html">Book Piha Lodge</a>
+        <a href="../canvasgamee/game.html">Play Game</a>
+        <a href="documentPA.pdf">Documentation Part A</a>
+        <a href="documentPB.pdf">Documentation Part B</a>
+    </nav>
+
+    <section id="booking-form">
+        <h2>Book Your Lodge</h2>
+        <form id="search-form">
+            <div class="form-row">
+                <label for="check-in-date">Check-in Date:</label>
+                <input type="date" id="check-in-date" name="check-in-date" required>
+            </div>
+            <div class="form-row">
+                <label for="check-out-date">Check-out Date:</label>
+                <input type="date" id="check-out-date" name="check-out-date" required>
+            </div>
+            <div class="form-row">
+                <label for="number-of-guests">Number of Guests:</label>
+                <input type="number" id="number-of-guests" name="number-of-guests" min="1" required>
+            </div>
+            <button type="button" id="search-button">Search</button>
+        </form>
+    </section>
+
+    <section id="map-container">
+        <img src="./images/pihaLodge.jpg" alt="Piha Lodge Map">
+    </section>
+
+    <div id="lodge-info" class="lodge-info">
+        <h2>Lodge Information</h2>
+        <div id="lodge-info-content">
+            <p><strong>Lodge ID:</strong> <span id="lodge-id"></span></p>
+            <p><strong>Cost:</strong> <span id="lodge-cost"></span></p>
+            <p><strong>Status:</strong> <span id="lodge-status"></span></p>
+            <p><strong>Capacity:</strong> <span id="lodge-capacity"></span></p>
+            <img id="lodge-image" src="" alt="Lodge Image">
+        </div>
+    </div>
+
+
+    <div id="booking-form-container" class="form-container">
+        <h2>Booking Form</h2>
+        <div id="booking-form">
+            <div class="form-row">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-row">
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" required readonly>
+            </div>
+            <div class="form-row">
+                <label for="check-in">Check-in Date:</label>
+                <input type="date" id="check-in" name="check-in" required readonly>
+            </div>
+            <div class="form-row">
+                <label for="check-out">Check-out Date:</label>
+                <input type="date" id="check-out" name="check-out" required readonly>
+            </div>
+            <div class="form-row">
+                <label for="total-cost">Total Cost:</label>
+                <input type="text" id="total-cost" name="total-cost" required readonly>
+            </div>
+            <button type="button" id="submit-booking">Submit Booking</button>
+        </div>
+    </div>
+    <div id="success-popup" class="success-popup">
+        <h2>Successfully booked!</h2>
+        <p id="booking-name"></p>
+        <button id="close-success-popup">Close</button>
+    </div>
+    
+    
+    <div class="container">
+        <div class="instructions">
+            <h2>Book a Lodge</h2>
+            <p class="separate-line">Instructions for how to use the booking system. This could include:</p>
+            <ul class="no-bullets">
+                <li>1. Set the Check-in and Check-out dates.</li>
+                <li>2. Enter the number of guests.</li>
+                <li>3. Click the <strong>Search</strong> button to see available lodges.</li>   
+                <li>4. Hover over lodges on the map to see details.</li>
+                <li>5. Select an available lodge by clicking on it.</li>
+                <li>6. Fill in your details and submit your booking.</li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <script src="./js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Lodges -->
+    <xs:element name="lodges">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Lodge 1 -->
+                <xs:element name="lodge1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int"/>
+                            <xs:element name="top" type="xs:int"/>
+                            <xs:element name="left" type="xs:int"/>
+                            <xs:element name="width" type="xs:int"/>
+                            <xs:element name="height" type="xs:int"/>
+                            <xs:element name="capacity" type="xs:int"/>
+                            <xs:element name="cost" type="xs:int"/>
+                            <xs:element name="startDate" type="xs:date"/>
+                            <xs:element name="endDate" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Lodge 2 -->
+                <xs:element name="lodge2">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int"/>
+                            <xs:element name="top" type="xs:int"/>
+                            <xs:element name="left" type="xs:int"/>
+                            <xs:element name="width" type="xs:int"/>
+                            <xs:element name="height" type="xs:int"/>
+                            <xs:element name="capacity" type="xs:int"/>
+                            <xs:element name="cost" type="xs:int"/>
+                            <xs:element name="startDate" type="xs:date"/>
+                            <xs:element name="endDate" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Lodge 3 -->
+                <xs:element name="lodge3">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int"/>
+                            <xs:element name="top" type="xs:int"/>
+                            <xs:element name="left" type="xs:int"/>
+                            <xs:element name="width" type="xs:int"/>
+                            <xs:element name="height" type="xs:int"/>
+                            <xs:element name="capacity" type="xs:int"/>
+                            <xs:element name="cost" type="xs:int"/>
+                            <xs:element name="startDate" type="xs:date"/>
+                            <xs:element name="endDate" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Lodge 4 -->
+                <xs:element name="lodge4">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int"/>
+                            <xs:element name="top" type="xs:int"/>
+                            <xs:element name="left" type="xs:int"/>
+                            <xs:element name="width" type="xs:int"/>
+                            <xs:element name="height" type="xs:int"/>
+                            <xs:element name="capacity" type="xs:int"/>
+                            <xs:element name="cost" type="xs:int"/>
+                            <xs:element name="startDate" type="xs:date"/>
+                            <xs:element name="endDate" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Lodge 5 -->
+                <xs:element name="lodge5">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int"/>
+                            <xs:element name="top" type="xs:int"/>
+                            <xs:element name="left" type="xs:int"/>
+                            <xs:element name="width" type="xs:int"/>
+                            <xs:element name="height" type="xs:int"/>
+                            <xs:element name="capacity" type="xs:int"/>
+                            <xs:element name="cost" type="xs:int"/>
+                            <xs:element name="startDate" type="xs:date"/>
+                            <xs:element name="endDate" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Lodge 6 -->
+                <xs:element name="lodge6">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int"/>
+                            <xs:element name="top" type="xs:int"/>
+                            <xs:element name="left" type="xs:int"/>
+                            <xs:element name="width" type="xs:int"/>
+                            <xs:element name="height" type="xs:int"/>
+                            <xs:element name="capacity" type="xs:int"/>
+                            <xs:element name="cost" type="xs:int"/>
+                            <xs:element name="startDate" type="xs:date"/>
+                            <xs:element name="endDate" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Lodge 7 -->
+                <xs:element name="lodge7">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int"/>
+                            <xs:element name="top" type="xs:int"/>
+                            <xs:element name="left" type="xs:int"/>
+                            <xs:element name="width" type="xs:int"/>
+                            <xs:element name="height" type="xs:int"/>
+                            <xs:element name="capacity" type="xs:int"/>
+                            <xs:element name="cost" type="xs:int"/>
+                            <xs:element name="startDate" type="xs:date"/>
+                            <xs:element name="endDate" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Lodge 8 -->
+                <xs:element name="lodge8">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int"/>
+                            <xs:element name="top" type="xs:int"/>
+                            <xs:element name="left" type="xs:int"/>
+                            <xs:element name="width" type="xs:int"/>
+                            <xs:element name="height" type="xs:int"/>
+                            <xs:element name="capacity" type="xs:int"/>
+                            <xs:element name="cost" type="xs:int"/>
+                            <xs:element name="startDate" type="xs:date"/>
+                            <xs:element name="endDate" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Lodge 9 -->
+                <xs:element name="lodge9">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int"/>
+                            <xs:element name="top" type="xs:int"/>
+                            <xs:element name="left" type="xs:int"/>
+                            <xs:element name="width" type="xs:int"/>
+                            <xs:element name="height" type="xs:int"/>
+                            <xs:element name="capacity" type="xs:int"/>
+                            <xs:element name="cost" type="xs:int"/>
+                            <xs:element name="startDate" type="xs:date"/>
+                            <xs:element name="endDate" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+                <!-- Lodge 10 -->
+                <xs:element name="lodge10">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:int"/>
+                            <xs:element name="top" type="xs:int"/>
+                            <xs:element name="left" type="xs:int"/>
+                            <xs:element name="width" type="xs:int"/>
+                            <xs:element name="height" type="xs:int"/>
+                            <xs:element name="capacity" type="xs:int"/>
+                            <xs:element name="cost" type="xs:int"/>
+                            <xs:element name="startDate" type="xs:date"/>
+                            <xs:element name="endDate" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

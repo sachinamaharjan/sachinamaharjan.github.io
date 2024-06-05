@@ -1,0 +1,197 @@
+html, body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #000;
+    background-color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    background-color: #36a5ca;
+    color: #fff;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+    margin: 0px 0px 15px 0px;
+    border-bottom-left-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
+    text-align: center;
+    padding: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li {
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    background-color: #e0e0e0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 8px 20px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #36a5ca;
+    color: #fff;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+#booking-form {
+    text-align: center;
+}
+
+.form-row {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#map-container {
+    width: 566px;
+    height: 400px;
+    display: flex;
+    margin: 20px 80px;
+    margin-left: 850px;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+.lodge {
+    position: absolute;
+    border: 1px solid #000000;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    background-color: yellow;
+}
+
+.lodge.available:hover {
+    background-color: orange; /* Change color to orange on hover if available */
+}
+
+.lodge.available {
+    background-color: green; /* Change color to green if available */
+}
+
+.lodge.unavailable {
+    background-color: red; /* Change color to red if unavailable */
+}
+
+.lodge-info {
+    display: none;
+    position: absolute;
+    top: 550px;
+    left: 500px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid black;
+    z-index: 100;
+    width: 320px;
+}
+
+#lodge-image {
+    max-width: 200px; /* Adjust the maximum width as needed */
+    max-height: 200px; /* Adjust the maximum height as needed */
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.form-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 1000;
+}
+
+.form-container button {
+    margin-top: 10px;
+}
+
+#booking-form-container {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 20px;
+    z-index: 999;
+}
+
+.success-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgreen; /* Light green background */
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 1000;
+    text-align: center; /* Center-align text */
+}
+#close-success-popup {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+
+#close-popup {
+    margin-top: 10px;
+    cursor: pointer;
+}
+.no-bullets {
+    list-style-type: none;
+}
+
+.container {
+    position: absolute;
+    top: 550px;
+    left: 50px;
+    border: 1px solid black;
+    width: 400px;
+}
+.instructions {
+    width: auto;
+    margin-left: 10px;
+}
+
